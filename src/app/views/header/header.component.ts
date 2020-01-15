@@ -19,12 +19,21 @@ export class HeaderComponent implements OnInit {
   toggleMenu(e) {
     const btn = document.getElementById('menu_checkbox');
     const menu = document.querySelector('nav ul');
+    const wraper = document.querySelector('.menu_wrapper');
 
     const toggle = e.target.checked;
 
     if (e.target.checked) {
-      menu.classList.add('slide');
+      wraper.classList.remove('hide');
+      setTimeout(() => {
+        menu.classList.add('slide');
+      }, 500);
+
     } else {
+      setTimeout(() => {
+        wraper.classList.add('hide');
+      }, 500);
+
       menu.classList.remove('slide');
     }
 

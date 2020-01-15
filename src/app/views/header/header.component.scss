@@ -10,9 +10,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-
+  box-shadow: -1px -3px 8px 1px #d3d3d3;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: linear-gradient(90deg, rgb(215, 241, 234),rgb(215, 241, 234),  rgba(255, 255, 255, 0.81));
 }
+
+
 
 .logo {
   padding-left: 15px;
@@ -27,6 +32,10 @@ header {
     right: 0;
     top: 0;
     overflow: hidden;
+}
+
+.menu_wrapper.hide {
+  display: none;
 }
 
 ul {
